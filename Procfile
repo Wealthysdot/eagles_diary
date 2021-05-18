@@ -1,0 +1,1 @@
+web: gunicorn eagles_blog.wsgi --log-file -
