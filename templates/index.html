@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'create' %}">Create New Entry</a>
+{% for entry in entry_list %}
+    <h3>{{ entry.entry_title }}</h3>
+    <p>{{ entry.entry_body }}</p>
+    <p>{{ entry.entry_date }}</p>
+    <a href="{% url 'delete' entry.pk %}">Delete Entry</a>
+{% endfor %}
+
+</body>
+</html>
