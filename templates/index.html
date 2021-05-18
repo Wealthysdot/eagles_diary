@@ -7,9 +7,9 @@
 <body>
 <a href="{% url 'create' %}">Create New Entry</a>
 {% for entry in entry_list %}
-    <h3>{{ entry.entry_title }}</h3>
-    <p>{{ entry.entry_body }}</p>
-    <p>{{ entry.entry_date }}</p>
+    <h3 style="color: #4ac1f7">{{ entry.entry_title }}</h3>
+    <p style="color: #006b1b">{{ entry.entry_body }}</p>
+    <p style="color: #006b1b">{{ entry.entry_date }}</p>
     <a href="{% url 'delete' entry.pk %}">Delete Entry</a>
 {% endfor %}
 
